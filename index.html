@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App météo</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="affiche">
+
+            <div class="titre">
+                <h1>Météo</h1>
+                <span id="ville">grenoble</span>
+                <div id="temperature">
+                        <span id="temperature_label">
+                            xx.x
+                        </span> °C
+                </div>
+            </div>
+
+            <div class="city">
+                <!-- Changer de ville -->
+                <input type="text">
+                <button id="meteo">Ma météo</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="overlay">
+        <button id="button">Ouvrir</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
