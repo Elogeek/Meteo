@@ -1,10 +1,7 @@
-let villeChoisie = "grenoble";
-let changerDeVille = document.querySelector('#changer');
+let changerDeVille = document.querySelector('#meteo');
 
-function donneTemperature(ville){
-
+function donneTemperature(ville) {
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric";
-
     let requete = new XMLHttpRequest();
     requete.open('GET', url);
     requete.responseType = 'json';
@@ -24,45 +21,41 @@ function donneTemperature(ville){
         }
     }
 }
-
 changerDeVille.addEventListener('click', () => {
-    villeChoisie = prompt('Choisissez une ville : ')
-    donneTemperature(villeChoisie);
+    let villeChoisie = document.getElementById('ville-input');
+    donneTemperature(villeChoisie.value);
 })
-
-
-donneTemperature(villeChoisie);
 
 //make overlay//
 let over = document.getElementById("overlay");
-document.querySelector("#button").addEventListener("click", function(e) {
+document.querySelector("#button-open").addEventListener("click", function(e) {
     let monDiv = document.createElement('div');
-    monDiv.id = "overlay";
     monDiv.style.position = "absolute";
     monDiv.style.top ="0";
     monDiv.style.left = "0";
     monDiv.style.zIndex = "10";
-    monDiv.style.backgroundColor = "rgba(204,204,204,0.72)";
+    monDiv.style.backgroundColor = "rgba(27,4,4,0.44)";
     monDiv.style.width = "100%";
     monDiv.style.height = "100vh";
     over.appendChild(monDiv)
 
     let div2 = document.createElement("div");
     div2.id = "window";
-    div2.style.backgroundColor = "lightblue";
+    div2.style.backgroundColor = "#6DD5FA";
+    div2.style.visibility = 0.5;
     div2.style.position = "absolute";
     div2.style.zIndex = "15";
     div2.style.left = "30%";
     div2.style.height = "50vh";
     div2.style.width = "50%";
-    div2.innerHTML = " Bienvenue, sur mon application météo!\n" + " Clique sur le bouton pour changer de ville.\n" + "La grenouille te donnera la température de ta ville! ";
+    div2.innerHTML = "Bienvenue, sur mon application météo!\n" + " Clique sur le bouton pour changer de ville.\n" + "La grenouille te donnera la température de ta ville! ";
     div2.style.fontWeight = "bold";
     over.appendChild(div2);
 
     /*my button*/
     let closed = document.createElement("button");
     closed.id = "button-close";
-    closed.innerHTML = " Fermer ";
+    closed.innerHTML = "Fermer";
     closed.style.zIndex = "15";
     div2.appendChild(closed);
 

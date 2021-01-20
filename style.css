@@ -8,7 +8,7 @@ body {
 }
 
 html, body {
-    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+    background-color: #6DD5FA;
     min-width: 400px;
     text-align: center;
     display: flex;
@@ -25,40 +25,22 @@ html, body {
     font-size: 4em;
 }
 
-#changer {
-    background: rgba(178, 223, 251, .3);
-    cursor: pointer;
-}
-
 .container {
     width: 600px;
     height: 450px;
     margin: 20px auto;
     text-align: center;
     background-image: url("fond.jpg");
-    box-shadow: 8px 8px grey;
+    box-shadow: 8px 8px rgba(204,204,204,0.72);
 
-}
-
-#changer {
-    background-color:#BEDB39 ;
-    border-radius: 5px;
-    width: 150px;
-    height: 24px;
-    text-transform: lowercase;
-    font-weight: normal;
-    margin-top: -58px;
-    margin-left: -31px;
 }
 
 .titre {
-
     padding-top: 185px;
 }
 
 #window {
-    box-shadow: 5px -13px 19px 5px rgba(27,4,4,0.44);
-
+    box-shadow: 3px -5px 10px 3px black;
 }
 
 button {
