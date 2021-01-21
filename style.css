@@ -8,7 +8,7 @@ body {
 }
 
 html, body {
-    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+    background-color: #6DD5FA;
     min-width: 400px;
     text-align: center;
     display: flex;
@@ -37,17 +37,6 @@ html, body {
     text-align: center;
     background-image: url("img/fond.jpg");
     box-shadow: 3px 3px darkblue;
-}
-
-#changer {
-    background-color:#BEDB39 ;
-    border-radius: 5px;
-    width: 150px;
-    height: 24px;
-    text-transform: lowercase;
-    font-weight: normal;
-    margin-top: -58px;
-    margin-left: -31px;
 }
 
 .titre {
