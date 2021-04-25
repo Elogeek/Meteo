@@ -8,12 +8,14 @@ body {
 }
 
 html, body {
-    background-color: #6DD5FA;
-    min-width: 400px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    background-image: url("img/background.png");
+    background-size:contain;
+    background-repeat: repeat;
 }
 
 #ville {
@@ -31,16 +33,17 @@ html, body {
 }
 
 .container {
-    width: 600px;
-    height: 450px;
-    margin: 20px auto;
+    width: 39rem;
+    height: 29rem;
+    margin: 2rem auto;
     text-align: center;
-    background-image: url("img/fond.jpg");
+    background-image: url("img/backFrog.jpg");
+    background-size: cover;
     box-shadow: 3px 3px darkblue;
 }
 
 .titre {
-    padding-top: 185px;
+    padding-top: 11rem;
 }
 
 #window {
@@ -51,9 +54,26 @@ button {
     border-radius: 8px;
     background-color:#BEDB39 ;
     font-weight: bold;
-    width: 70px;
-    height: 50px;
-    margin-top: 5px;
+    width: 8rem;
+    height: 3rem;
+    margin-top: 0;
+    position: relative;
+    right: 35rem;
+}
+
+#meteo {
+    position: relative;
+    left: 1rem;
+}
+
+button:hover {
+   background-color: turquoise;
+}
+
+input {
+    margin: -5px;
+    height: 2rem;
+    padding: 1%;
 }
 
 div {
@@ -61,11 +81,28 @@ div {
     padding: 15px;
 }
 
+#overlay {
+    background-color:transparent;
+}
+
 /*responsive*/
-@media screen and (max-width: 100px) {
+@media screen and(max-width: 100px) {
+
     .container {
         width: 100%;
         overflow: hidden;
     }
+
+    #button,#button-close {
+        border-radius: 8px;
+        background-color:#BEDB39 ;
+        font-weight: bold;
+        width: 8rem;
+        height: 3rem;
+        margin-top: 0;
+        position: relative;
+         right: 4rem;
+    }
+
 }
 
