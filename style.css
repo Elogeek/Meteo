@@ -86,10 +86,10 @@ div {
 }
 
 /*responsive*/
-@media screen and(max-width: 100px) {
+@media screen and (max-width: 1000px) {
 
     .container {
-        width: 100%;
+        width: 64%;
         overflow: hidden;
     }
 
@@ -101,7 +101,7 @@ div {
         height: 3rem;
         margin-top: 0;
         position: relative;
-         right: 4rem;
+         right: 0;
     }
 
 }
